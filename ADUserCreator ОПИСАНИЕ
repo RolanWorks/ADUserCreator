@@ -1,0 +1,40 @@
+# ADUserCreator
+
+##  Описание
+Программа Windows Forms на C# для:
+- Создания пользователей в Active Directory
+- Генерации паролей
+- Добавления пользователей в группы
+- Просмотра логов Hotspot MikroTik через API tik4net
+
+## Как использовать
+
+1. Скачайте проект.
+2. Откройте в Visual Studio.
+3. В `Form1.cs` замените:
+   - **Домен:** `server.com` на ваш
+   - **OU:** `"OU=RADIUS WI-FI,DC=server,DC=com"` на ваш OU
+   - **IP MikroTik:** `"192.168.10.1"`
+   - **Логин MikroTik:** `"admin"`
+   - **Пароль MikroTik:** `password`
+
+4. Соберите проект (Build).
+5. Запустите `ADUserCreator.exe`.
+
+## Настройки в коде
+
+using (PrincipalContext context = new PrincipalContext(ContextType.Domain, "server.com", "OU=RADIUS WI-FI,DC=server,DC=com"))
+Измените server.com и OU=... под вашу структуру Active Directory.
+
+connection.Open("192.168.10.1", "admin", "pswd..");
+Измените IP, логин и пароль MikroTik.
+ Логи
+Сохраняются по пути /logs/ с разделением по дням.
+
+ Структура проекта
+Form1.cs – логика кнопок
+Form1.Designer.cs – интерфейс
+Program.cs – точка входа
+logo.ico – иконка
+ Вклад
+Pull Requests приветствуются.
