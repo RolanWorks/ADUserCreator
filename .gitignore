@@ -1,1 +1,23 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# NuGet Packages
+packages/
+
+# Logs
+*.log
+
+# Others
+*.cache
+*.dbmdl
+*.db
 
