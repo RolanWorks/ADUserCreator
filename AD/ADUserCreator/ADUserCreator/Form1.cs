@@ -187,7 +187,7 @@ namespace ADUserCreator
             {
                 using (var connection = ConnectionFactory.CreateConnection(TikConnectionType.Api))
                 {
-                    connection.Open("192.168.10.1", "admin", "230584");
+                    connection.Open("192.168.10.1", "admin", "password your");
 
                     var active = connection.CreateCommand("/ip/hotspot/active/print").ExecuteList();
 
